@@ -1,0 +1,18 @@
+<section>
+<h3>Order Details</h3>
+<hr/>
+<p>First name: <%=@pizza.first_name%></p>
+<hr/>
+<p>Last name: <%=@pizza.last_name%></p>
+<hr/>
+<p>Topping: <%=@pizza.topping%></p>
+<hr/>
+<p>Quantity: <%=@pizza.quantity%></p>
+<hr/>
+</section>
+
+<p><a href="/pizzas/<%=@pizza.id%>/edit">Edit Order</a></p>
+
+<form action="/pizzas/<%=@pizza.id%>/delete" method="post">
+  <input type="submit" value="delete"/>
+</form>

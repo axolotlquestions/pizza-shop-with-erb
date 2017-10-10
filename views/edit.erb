@@ -1,0 +1,35 @@
+<h3>Current Order Details</h3>
+<hr/>
+<p>First name: <%=@pizza.first_name%></p>
+<hr/>
+<p>Last name: <%=@pizza.last_name%></p>
+<hr/>
+<p>Topping: <%=@pizza.topping%></p>
+<hr/>
+<p>Quantity: <%=@pizza.quantity%></p>
+<hr/>
+
+<h3>Change your order details</h3>
+
+<form action="/pizzas/<%=@pizza.id%>" method="POST">
+  <input type="hidden" name="id" value="<%=@pizza.id%>"/>
+
+  <label for="firstName">First Name:</label>
+  <input type="text" name="first_name" value="<%=@pizza.first_name%>"/>
+
+  <label for="lastName">Last Name:</label>
+  <input type="text" name="last_name" value="<%=@pizza.last_name%>"/>
+
+  <label for="pizzaSelect">Select a Pizza:</label>
+  <select name="topping" id="pizzaSelect">
+    <option value="Strawberry">Strawberry</option>
+    <option value="Scrummy">Scrummy</option>
+  </select>
+
+  <label for="Quantity">Quantity:</label>
+  <input type="number" name="quantity" value="<%=@pizza.quantity%>">
+
+  <input type="submit" value="Submit">
+
+
+</form>
